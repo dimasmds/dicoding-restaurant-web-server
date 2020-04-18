@@ -1,4 +1,5 @@
 import express from "express";
+import path from "path";
 import bodyParser from "body-parser";
 import cors from "cors";
 import RestaurantController from "./controller/RestaurantController";
@@ -9,6 +10,12 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+
+app.get('/', (request, response) => {
+    response.status(200);
+    response.sendFile(path.resolve(__dirname, "index.html"));
+});
+
 
 app.get("/list", (request, response) => {
     const results = RestaurantController.getList();
