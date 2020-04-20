@@ -3,6 +3,7 @@ import path from "path";
 import bodyParser from "body-parser";
 import cors from "cors";
 import RestaurantController from "./controller/RestaurantController";
+import {getTodayDate} from "./utils/date-generator";
 
 
 const app = express();
@@ -42,7 +43,7 @@ app.post("/review", (request, response) => {
         id: request.body.id,
         name: request.body.name,
         review: request.body.review,
-        date: "13 November 2019"
+        date: getTodayDate()
     };
 
     const results = RestaurantController.addReview(review);
