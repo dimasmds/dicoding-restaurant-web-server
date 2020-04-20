@@ -16,7 +16,7 @@ export default class RestaurantFactory extends BaseFactory {
         this._cities = arrayMaker(cities, count);
         this._address = arrayMaker(address, count);
         this._pictures = arrayReducer(pictures, count);
-        this._rating = arrayReducer(ratings, count);
+        this._rating = arrayMaker(ratings, count);
 
         // i wanna keep functional style so i avoid to use traditional for loop.
         this._categories = this._names.map(() => {
