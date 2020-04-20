@@ -7,6 +7,7 @@ export default class RestaurantController {
             return {
                 error: false,
                 message: "success",
+                count: restaurants.length,
                 restaurants
             };
         }
@@ -14,6 +15,7 @@ export default class RestaurantController {
         return {
             error: true,
             message: "not found",
+            count: 0,
             restaurants
         };
     }
