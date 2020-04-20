@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
-app.get('/', (request, response) => {
+app.get("/", (request, response) => {
     response.status(200);
     response.sendFile(path.resolve(__dirname, "index.html"));
 });
