@@ -3,7 +3,7 @@ const names = ["Dove Kesepian", "Bobby", "Melting Pot", "Tempat Siang Hari", "Ma
 
 const categories = ["Amerika", "Sop", "Sunda", "Modern", "Italia", "Spanyol", "Jawa", "Bali"];
 
-const cities = ["Jakarta", "Jawa Barat", "Bali", "Gorontalo", "Medan", "Jawa Tengah", "Jawa Timur"];
+const cities = ["Jakarta", "Bandung", "Bali", "Gorontalo", "Medan", "Malang", "Surabaya", "Samarinda", "Ternate", "Aceh", "Balikpapan"];
 
 const address = ["Jln. Batu Permata no 1", "Jln. Pustakawan no 9", "Jln. Belimbing Timur no 27", "Jln. Pandeglang no 19"];
 
