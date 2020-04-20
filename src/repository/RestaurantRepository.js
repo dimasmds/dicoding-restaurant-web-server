@@ -7,7 +7,8 @@ class RestaurantRepository {
                 id: restaurant.id,
                 name: restaurant.name,
                 picture: restaurant.picture,
-                city: restaurant.city
+                city: restaurant.city,
+                rating: restaurant.rating
             };
         });
     }

@@ -47,6 +47,7 @@ export default class RestaurantFactory extends BaseFactory {
                     foods: this._foods[index],
                     drinks: this._drinks[index]
                 },
+                rating: this._rating[index],
                 consumerReviews: this._consumerReviews[index]
             };
         });
