@@ -27,6 +27,44 @@ const pictures = [
     "https://cdn.pixabay.com/photo/2017/01/24/03/54/urban-2004494_960_720.jpg"
 ];
 
+const foods = [
+    "Madras kelapa",
+    "Ikan teri dan roti",
+    "Bebek crepes",
+    "Sosis squash dan mint",
+    "Sup Kohlrabi",
+    "Napolitana",
+    "Tumis leek",
+    "Daging Sapi",
+    "Toastie salmon",
+    "roket penne",
+    "Paket rosemary",
+    "Kari terong",
+    "Matzo farfel",
+    "Salad yuzu",
+    "Kari kacang dan telur",
+    "Salad lengkeng"
+];
+
+const drinks = [
+    "Kopi",
+    "Air",
+    "Minuman soda",
+    "Jus mangga",
+    "Jus apel",
+    "Jus jeruk",
+    "Jus alpukat",
+    "Es kopi",
+    "Es krim",
+    "Kopi espresso",
+    "Teh manis",
+    "Es teh",
+    "Jus tomat",
+    "Coklat panas",
+    "Sirup"
+
+];
+
 const consumerNames = ["Dimas", "Ahmad", "Widdy", "Gilang", "Arif", "Buchori"];
 
 const consumerReview = [
@@ -38,6 +76,38 @@ const consumerReview = [
     "Saya sangat suka menu malamnya!"
 ];
 
+const ratings = [
+    3.5,
+    3.6,
+    3.7,
+    3.8,
+    3.9,
+    4.0,
+    4.1,
+    4.2,
+    4.3,
+    4.4,
+    4.5,
+    4.6,
+    4.7,
+    4.8,
+    4.9,
+    5.0
+];
+
 const consumerDate = ["12 Januari 2020", "13 November 2019", "14 Agustus 2018", "13 Juli 2019"];
 
-export {names, categories, cities, address, descriptions, pictures, consumerNames, consumerReview, consumerDate};
+export {
+    names,
+    categories,
+    cities,
+    address,
+    descriptions,
+    pictures,
+    consumerNames,
+    consumerReview,
+    consumerDate,
+    drinks,
+    foods,
+    ratings
+};
