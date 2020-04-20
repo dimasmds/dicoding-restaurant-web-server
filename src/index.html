@@ -1,14 +1,12 @@
 <html lang="ID">
 <head>
-    <title>Dummy Books API Reference</title>
+    <title>Dummy Restaurant API Reference</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container" style="margin-top: 16px">
-    <h2><strong>Get All Books</strong></h2>
-
-    <p><em>Mendapatkan daftar buku</em></p>
-
+    <h2><strong>Get List of Restaurant</strong></h2>
+    <p><em>Mendapatkan daftar restoran</em></p>
     <ul>
         <li><p><strong>URL</strong></p>
 
@@ -18,14 +16,24 @@
             <p><code>GET</code></p></li>
     </ul>
 
-    <h2><strong>Add new Book</strong></h2>
 
-    <p>Menambahkan data buku</p>
-
+    <h2><strong>Get Detail of Restaurant</strong></h2>
+    <p><em>Mendapatkan detail restoran</em></p>
     <ul>
         <li><p><strong>URL</strong></p>
 
-            <p>/add</p></li>
+            <p>/detail/:id</p></li>
+        <li><p><strong>Method:</strong></p>
+
+            <p><code>GET</code></p></li>
+    </ul>
+
+    <h2><strong>Add New Review</strong></h2>
+    <p><em>Menambahkan review</em></p>
+    <ul>
+        <li><p><strong>URL</strong></p>
+
+            <p>/review</p></li>
         <li><p><strong>Method:</strong></p>
 
             <p><code>POST</code></p></li>
@@ -43,68 +51,13 @@
             <ul>
                 <li>urlencoded :
                     <ul>
-                        <li>id : number</li>
-                        <li>title : string</li>
-                        <li><p>author string</p></li>
+                        <li>id : string</li>
+                        <li>name : string</li>
+                        <li>review : string</li>
                     </ul>
                 </li>
 
-                <li><p>JSON: <code>{"id" : number, "title" : string, "author" : string }</code></p></li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2><strong>Edit Book</strong></h2>
-
-    <p>Mengubah data buku</p>
-
-    <ul>
-        <li><p><strong>URL</strong></p>
-
-            <p>/edit/:id</p></li>
-        <li><p><strong>Method:</strong></p>
-
-            <p><code>PUT</code></p></li>
-        <li><p><strong>Headers</strong></p>
-
-            <ul>
-                <li>Content-Type: <code>application/x-www-form-urlencoded</code> | <code>application/json</code></li>
-                <li>X-Auth-Token: <code>YOUR_API_KEY</code> (for test using <code>12345</code>)</li>
-            </ul>
-        </li>
-        <li><p><strong>Body</strong></p>
-
-            <p>Pilih salah satu</p>
-
-            <ul>
-                <li>urlencoded :
-                    <ul>
-                        <li>id : number</li>
-                        <li>title : string</li>
-                        <li><p>author string</p></li>
-                    </ul>
-                </li>
-
-                <li><p>JSON: <code>{"id" : number, "title" : string, "author" : string }</code></p></li>
-            </ul>
-        </li>
-    </ul>
-
-    <h2><strong>Delete Book</strong></h2>
-
-    <p>Menghapus buku</p>
-
-    <ul>
-        <li><p><strong>URL</strong></p>
-
-            <p>/delete/:id</p></li>
-        <li><p><strong>Method:</strong></p>
-
-            <p><code>DELETE</code></p></li>
-        <li><p><strong>Headers</strong></p>
-
-            <ul>
-                <li>X-Auth-Token: <code>YOUR_API_KEY</code> (for test using <code>12345</code>)</li>
+                <li><p>JSON: <code>{"id" : string, "name" : string, "review" : string }</code></p></li>
             </ul>
         </li>
     </ul>
