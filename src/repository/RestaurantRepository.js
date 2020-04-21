@@ -1,8 +1,15 @@
-let restaurants = require("../data/consume");
+import {addReviewAction, receiveDataAction} from "../redux/actions";
+import restaurants from "../data/consume";
 
 class RestaurantRepository {
-    static getList() {
-        return restaurants.map(restaurant => {
+    constructor(store) {
+        this._store = store;
+        this._store.dispatch(receiveDataAction(restaurants));
+        this._restaurants = this._store.getState();
+    }
+
+    getList() {
+        return this._restaurants.map(restaurant => {
             return {
                 id: restaurant.id,
                 name: restaurant.name,
@@ -13,31 +20,16 @@ class RestaurantRepository {
         });
     }
 
-    static getRestaurantById(id) {
-        return restaurants.filter(restaurant => restaurant.id === id)[0] || null;
+    getRestaurantById(id) {
+        return this._restaurants.filter(restaurant => restaurant.id === id)[0] || null;
     }
 
-    /**
-     * @deprecated i will found another ways later! I must learn REDUX so well!
-     */
-    static addReview(review) {
-        // it's little bit hard :(
-        restaurants = restaurants.map(restaurant => {
-            return restaurant.id === review.id ?
-                {
-                    ...restaurant,
-                    consumerReviews: restaurant.consumerReviews.concat([{
-                        name: review.name,
-                        review: review.review,
-                        date: review.date
-                    }])
-                } : restaurant;
-        });
-
-        const filteredRestaurant = restaurants.filter(restaurant => restaurant.id === review.id);
-
-        return filteredRestaurant.length ? filteredRestaurant[0].consumerReviews : null;
-
+    addReview(review) {
+        console.log(review.id);
+        this._store.dispatch(addReviewAction(review));
+        this._restaurants = this._store.getState();
+        const restaurant = this._restaurants.filter(res => res.id === review.id);
+        return restaurant.length ? restaurant[0].consumerReviews : null;
     }
 }
 
