@@ -1,5 +1,4 @@
 import RestaurantRepository from "../repository/RestaurantRepository";
-import {receiveDataAction} from "../redux/actions";
 
 export default class RestaurantController {
 
