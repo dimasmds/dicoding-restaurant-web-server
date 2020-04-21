@@ -4,7 +4,9 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import RestaurantController from "./controller/RestaurantController";
 import {getTodayDate} from "./utils/date-generator";
+import store from "./redux/store";
 
+const restaurantController = new RestaurantController(store);
 
 const app = express();
 
@@ -19,7 +21,7 @@ app.get("/", (request, response) => {
 
 
 app.get("/list", (request, response) => {
-    const results = RestaurantController.getList();
+    const results = restaurantController.getList();
     if (results.error) {
         response.status(404);
     } else {
@@ -29,8 +31,8 @@ app.get("/list", (request, response) => {
 });
 
 app.get("/detail/:id", (request, response) => {
-    const results = RestaurantController.getRestaurantById(request.params.id);
-    if(results.error) {
+    const results = restaurantController.getRestaurantById(request.params.id);
+    if (results.error) {
         response.status(400);
     } else {
         response.status(200);
@@ -46,8 +48,8 @@ app.post("/review", (request, response) => {
         date: getTodayDate()
     };
 
-    const results = RestaurantController.addReview(review);
-    if(results.error) {
+    const results = restaurantController.addReview(review);
+    if (results.error) {
         response.status(404);
     } else {
         response.status(200);

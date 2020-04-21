@@ -18,8 +18,8 @@ test("arrayReducer should be distinct", () => {
    expect(arrayReducer(names, 3)).toBeDistinct();
 });
 
-test("id should have 19 length char", () => {
-    expect(generateId()).toHaveLength(19);
+test("id should not null", () => {
+    expect(generateId()).not.toBeNull();
 });
 
 test("random number should be between 10 and 32 ranges", () => {

@@ -1,8 +1,14 @@
 import RestaurantRepository from "../repository/RestaurantRepository";
+import {receiveDataAction} from "../redux/actions";
 
 export default class RestaurantController {
-    static getList() {
-        const restaurants = RestaurantRepository.getList();
+
+    constructor(store) {
+        this._restaurantRepository = new RestaurantRepository(store);
+    }
+
+    getList() {
+        const restaurants = this._restaurantRepository.getList();
         if (restaurants.length) {
             return {
                 error: false,
@@ -20,8 +26,8 @@ export default class RestaurantController {
         };
     }
 
-    static getRestaurantById(id) {
-        const restaurant = RestaurantRepository.getRestaurantById(id);
+    getRestaurantById(id) {
+        const restaurant = this._restaurantRepository.getRestaurantById(id);
         if (restaurant) {
             return {
                 error: false,
@@ -37,8 +43,8 @@ export default class RestaurantController {
         };
     }
 
-    static addReview(review) {
-        const customerReviews = RestaurantRepository.addReview(review);
+    addReview(review) {
+        const customerReviews = this._restaurantRepository.addReview(review);
         if(customerReviews) {
             return {
                 error: false,
