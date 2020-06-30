@@ -41,7 +41,7 @@ export default class RestaurantFactory extends BaseFactory {
                 description: this._description[index],
                 city: this._cities[index],
                 address: this._address[index],
-                picture: this._pictures[index],
+                pictureId: this._pictures[index],
                 categories: this._categories[index],
                 menus: {
                     foods: this._foods[index],

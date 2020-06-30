@@ -13,7 +13,7 @@ class RestaurantRepository {
             return {
                 id: restaurant.id,
                 name: restaurant.name,
-                picture: restaurant.picture,
+                pictureId: restaurant.pictureId,
                 city: restaurant.city,
                 rating: restaurant.rating
             };

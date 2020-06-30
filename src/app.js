@@ -11,6 +11,7 @@ const restaurantController = new RestaurantController(store);
 const app = express();
 
 app.use(cors());
+app.use(express.static("images"));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
@@ -19,6 +20,23 @@ app.get("/", (request, response) => {
     response.sendFile(path.resolve(__dirname, "index.html"));
 });
 
+app.get("/images/small/:imageId", (request, response) => {
+    response.status(200);
+    response.set({"Content-Type": "image/png"});
+    response.sendFile(path.resolve(__dirname, `images/small/${request.params.imageId}.jpg`));
+});
+
+app.get("/images/medium/:imageId", (request, response) => {
+    response.status(200);
+    response.set({"Content-Type": "image/png"});
+    response.sendFile(path.resolve(__dirname, `images/medium/${request.params.imageId}.jpg`));
+});
+
+app.get("/images/large/:imageId", (request, response) => {
+    response.status(200);
+    response.set({"Content-Type": "image/png"});
+    response.sendFile(path.resolve(__dirname, `images/large/${request.params.imageId}.jpg`));
+});
 
 app.get("/list", (request, response) => {
     const results = restaurantController.getList();

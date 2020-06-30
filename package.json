@@ -7,7 +7,8 @@
   "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon index.js",
-    "test": "jest"
+    "test": "jest",
+    "images": "webpack"
   },
   "keywords": [],
   "author": "dimas_saputra <dimas.maulanads@gmail.com>",
@@ -26,6 +27,9 @@
     "eslint": "^6.8.0",
     "eslint-plugin-jest": "^23.8.2",
     "jest": "^25.4.0",
-    "nodemon": "^2.0.3"
+    "nodemon": "^2.0.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-images-resizer": "^0.1.2"
   }
 }
