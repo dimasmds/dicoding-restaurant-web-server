@@ -1,5 +1,6 @@
 const path = require("path");
 const WebpackImagesResizer = require("webpack-images-resizer");
+const ImageminWebpackPlugin = require("imagemin-webpack-plugin").default;
 
 const small = [{
     src: path.resolve(__dirname, "images"),
@@ -17,13 +18,19 @@ const large = [{
 }];
 
 module.exports = {
-    mode: "development",
+    mode: "production",
+    entry: "./entry.js",
     output: {
         path: path.resolve(__dirname, "src")
     },
     plugins: [
-        new WebpackImagesResizer(small, {width: "25%"}),
-        new WebpackImagesResizer(medium, {width: "50%"}),
-        new WebpackImagesResizer(large, {width: "75%"})
+        new WebpackImagesResizer(small, {width: "25%", quality: 70}),
+        new WebpackImagesResizer(medium, {width: "50%", quality: 70}),
+        new WebpackImagesResizer(large, {width: "75%", quality: 70}),
+        new ImageminWebpackPlugin({
+            pngquant: ({
+                quality: 50,
+            })
+        })
     ]
 };
