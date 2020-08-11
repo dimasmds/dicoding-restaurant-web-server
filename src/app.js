@@ -75,4 +75,8 @@ app.post("/review", (request, response) => {
     response.json(results);
 });
 
+app.get('/restart', (request, response) => {
+    process.exit(1);
+});
+
 app.listen(process.env.PORT || 5000);
