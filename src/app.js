@@ -2,9 +2,9 @@ import express from 'express';
 import path from 'path';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import RestaurantController from './controller/v1/RestaurantController';
+import RestaurantController from './controller/RestaurantController';
 import { getTodayDate } from './utils/date-generator';
-import store from './redux/v1/store';
+import store from './redux/store';
 
 const restaurantController = new RestaurantController(store);
 

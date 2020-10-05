@@ -1,8 +1,9 @@
-import RestaurantRepository from '../../repository/v1/RestaurantRepository';
+import RestaurantRepository from '../repository/RestaurantRepository';
+import { APP_VERSION } from '../config';
 
 export default class RestaurantController {
   constructor(store) {
-    this._restaurantRepository = new RestaurantRepository(store);
+    this._restaurantRepository = new RestaurantRepository(store, APP_VERSION);
   }
 
   getList() {

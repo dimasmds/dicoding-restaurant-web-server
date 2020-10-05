@@ -1,10 +1,16 @@
-import { addReviewAction, receiveDataAction } from '../../redux/v1/actions';
-import restaurants from '../../data/v1/consume';
+import { addReviewAction, receiveDataAction } from '../redux/actions';
+import restaurantsV1 from '../data/v1/consume';
+import restaurantsV2 from '../data/v2/restaurants';
 
 class RestaurantRepository {
-  constructor(store) {
+  constructor(store, version) {
     this._store = store;
-    this._store.dispatch(receiveDataAction(restaurants));
+
+    if (version === 1) {
+      this._store.dispatch(receiveDataAction(restaurantsV1));
+    } else {
+      this._store.dispatch(receiveDataAction(restaurantsV2));
+    }
     this._restaurants = this._store.getState();
   }
 

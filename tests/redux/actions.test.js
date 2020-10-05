@@ -1,4 +1,4 @@
-import { ActionType, addReviewAction, receiveDataAction } from '../../src/redux/v1/actions';
+import { ActionType, addReviewAction, receiveDataAction } from '../../src/redux/actions';
 
 describe('action', () => {
   it('should create an action to add review', () => {
