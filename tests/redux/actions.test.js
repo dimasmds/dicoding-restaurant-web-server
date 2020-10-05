@@ -1,31 +1,31 @@
-import {ActionType, addReviewAction, receiveDataAction} from "../../src/redux/actions";
+import { ActionType, addReviewAction, receiveDataAction } from '../../src/redux/v1/actions';
 
-describe("action", () => {
-    it("should create an action to add review", () => {
-        const review = {
-            name: "Dimas",
-            review: "Lorem ipsum dolor sit amet",
-            date: "a dummy date"
-        };
+describe('action', () => {
+  it('should create an action to add review', () => {
+    const review = {
+      name: 'Dimas',
+      review: 'Lorem ipsum dolor sit amet',
+      date: 'a dummy date',
+    };
 
-        const expectedAction = {
-            type: ActionType.ADD_REVIEW,
-            review
-        };
-        expect(addReviewAction(review)).toEqual(expectedAction);
-    });
+    const expectedAction = {
+      type: ActionType.ADD_REVIEW,
+      review,
+    };
+    expect(addReviewAction(review)).toEqual(expectedAction);
+  });
 
-    it("should create an action to receive data", () => {
-        const restaurants = {
-            id: "Dummy Id",
-            name: "Dummy Name",
-            description: "Dummy Description"
-        };
-        const expectedAction = {
-            type: ActionType.RECEIVE_DATA,
-            restaurants
-        };
+  it('should create an action to receive data', () => {
+    const restaurants = {
+      id: 'Dummy Id',
+      name: 'Dummy Name',
+      description: 'Dummy Description',
+    };
+    const expectedAction = {
+      type: ActionType.RECEIVE_DATA,
+      restaurants,
+    };
 
-        expect(receiveDataAction(restaurants)).toEqual(expectedAction);
-    });
+    expect(receiveDataAction(restaurants)).toEqual(expectedAction);
+  });
 });

@@ -1,7 +1,8 @@
 export default class BaseFactory {
-    constructor(count) {
-        this._count = count;
-    }
+  constructor(count) {
+    this._count = count;
+  }
 
-    build() { }
+  // eslint-disable-next-line class-methods-use-this
+  build() { }
 }

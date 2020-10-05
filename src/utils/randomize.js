@@ -1,5 +1,3 @@
-const randomize = (max, min = 1) => {
-    return Math.floor(Math.random() * max) + min;
-};
+const randomize = (max, min = 1) => Math.floor(Math.random() * max) + min;
 
 export default randomize;

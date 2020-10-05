@@ -1,9 +1,7 @@
-import moment from "moment";
+import moment from 'moment';
 
-moment.locale("id");
+moment.locale('id');
 
-const getTodayDate = (format = "LL") => {
-    return moment().format(format);
-};
+const getTodayDate = (format = 'LL') => moment().format(format);
 
-export {getTodayDate};
+export { getTodayDate };
