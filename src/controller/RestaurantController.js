@@ -77,4 +77,13 @@ export default class RestaurantController {
       customerReviews,
     };
   }
+
+  searchRestaurants(query) {
+    const restaurants = this._restaurantRepository.searchRestaurants(query);
+    return {
+      error: false,
+      founded: restaurants.length,
+      restaurants,
+    };
+  }
 }

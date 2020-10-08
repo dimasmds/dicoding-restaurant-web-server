@@ -75,6 +75,15 @@ app.post('/review', (request, response) => {
   response.json(results);
 });
 
+app.get('/search', (request, response) => {
+  const query = request.query.q;
+
+  const result = restaurantController.searchRestaurants(query);
+
+  response.status(200);
+  response.json(result);
+});
+
 app.get('/restart', () => {
   process.exit(1);
 });

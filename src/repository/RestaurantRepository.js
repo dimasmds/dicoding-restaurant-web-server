@@ -34,11 +34,39 @@ class RestaurantRepository {
   }
 
   addReview(review) {
-    console.log(review.id);
     this._store.dispatch(addReviewAction(review));
     this._restaurants = this._store.getState();
     const restaurant = this._restaurants.filter((res) => res.id === review.id);
     return restaurant.length ? restaurant[0].consumerReviews : null;
+  }
+
+  searchRestaurants(query) {
+    return this._restaurants.filter((restaurant) => {
+      const { categories, menus } = restaurant;
+      const { drinks, foods } = menus;
+
+      let decisions = false;
+
+      categories.forEach((category) => {
+        if (category.name.toLowerCase().includes(query.toLowerCase())) {
+          decisions = true;
+        }
+      });
+
+      drinks.forEach((drink) => {
+        if (drink.name.toLowerCase().includes(query.toLowerCase())) {
+          decisions = true;
+        }
+      });
+
+      foods.forEach((food) => {
+        if (food.name.toLowerCase().includes(query.toLowerCase())) {
+          decisions = true;
+        }
+      });
+
+      return decisions;
+    });
   }
 }
 
