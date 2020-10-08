@@ -66,6 +66,13 @@ class RestaurantRepository {
       });
 
       return decisions;
+    }).map((restaurant) => {
+      const {
+        id, name, description, pictureId, city, rating,
+      } = restaurant;
+      return {
+        id, name, description, pictureId, city, rating,
+      };
     });
   }
 }
