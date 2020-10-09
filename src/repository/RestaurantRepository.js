@@ -42,10 +42,14 @@ class RestaurantRepository {
 
   searchRestaurants(query) {
     return this._restaurants.filter((restaurant) => {
-      const { categories, menus } = restaurant;
+      const { categories, menus, name } = restaurant;
       const { drinks, foods } = menus;
 
       let decisions = false;
+
+      if (name.toLowerCase().includes(query.toLowerCase())) {
+        decisions = true;
+      }
 
       categories.forEach((category) => {
         if (category.name.toLowerCase().includes(query.toLowerCase())) {
