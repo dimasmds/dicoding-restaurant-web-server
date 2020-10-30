@@ -11,7 +11,7 @@ const restaurants = [{
     drinks: [{ name: 'Es krim' }, { name: 'Sirup' }, { name: 'Jus apel' }, { name: 'Jus jeruk' }, { name: 'Coklat panas' }, { name: 'Air' }, { name: 'Es kopi' }, { name: 'Jus alpukat' }, { name: 'Jus mangga' }, { name: 'Teh manis' }, { name: 'Kopi espresso' }, { name: 'Minuman soda' }, { name: 'Jus tomat' }],
   },
   rating: 4.2,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Tidak rekomendasi untuk pelajar!',
     date: '13 November 2019',
@@ -29,7 +29,7 @@ const restaurants = [{
     drinks: [{ name: 'Jus tomat' }, { name: 'Minuman soda' }, { name: 'Jus apel' }, { name: 'Jus mangga' }, { name: 'Es krim' }, { name: 'Kopi espresso' }, { name: 'Jus alpukat' }, { name: 'Coklat panas' }, { name: 'Es kopi' }, { name: 'Teh manis' }, { name: 'Sirup' }, { name: 'Jus jeruk' }],
   },
   rating: 4,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Tidak ada duanya!',
     date: '13 November 2019',
@@ -55,7 +55,7 @@ const restaurants = [{
     drinks: [{ name: 'Kopi espresso' }, { name: 'Coklat panas' }, { name: 'Jus jeruk' }, { name: 'Jus apel' }, { name: 'Minuman soda' }, { name: 'Air' }, { name: 'Es kopi' }],
   },
   rating: 4.2,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Widdy',
     review: 'Tidak ada duanya!',
     date: '13 Juli 2019',
@@ -81,7 +81,7 @@ const restaurants = [{
     drinks: [{ name: 'Minuman soda' }, { name: 'Es teh' }, { name: 'Jus tomat' }, { name: 'Coklat panas' }, { name: 'Jus jeruk' }, { name: 'Air' }, { name: 'Kopi espresso' }, { name: 'Es kopi' }, { name: 'Sirup' }, { name: 'Jus alpukat' }, { name: 'Jus mangga' }, { name: 'Jus apel' }, { name: 'Es krim' }],
   },
   rating: 4.6,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Saya sangat suka menu malamnya!',
     date: '13 November 2019',
@@ -103,7 +103,7 @@ const restaurants = [{
     drinks: [{ name: 'Sirup' }, { name: 'Jus mangga' }, { name: 'Es teh' }, { name: 'Jus jeruk' }, { name: 'Teh manis' }, { name: 'Kopi espresso' }, { name: 'Es kopi' }, { name: 'Minuman soda' }, { name: 'Jus alpukat' }, { name: 'Jus tomat' }, { name: 'Es krim' }, { name: 'Coklat panas' }],
   },
   rating: 4.5,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Tempatnya bagus namun menurut saya masih sedikit mahal.',
     date: '13 Juli 2019',
@@ -125,7 +125,7 @@ const restaurants = [{
     drinks: [{ name: 'Minuman soda' }, { name: 'Jus apel' }, { name: 'Air' }, { name: 'Jus jeruk' }, { name: 'Es krim' }, { name: 'Es teh' }, { name: 'Jus tomat' }, { name: 'Coklat panas' }],
   },
   rating: 3.7,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Harganya murah sekali!',
     date: '14 Agustus 2018',
@@ -143,7 +143,7 @@ const restaurants = [{
     drinks: [{ name: 'Es kopi' }, { name: 'Air' }, { name: 'Jus apel' }, { name: 'Kopi espresso' }, { name: 'Teh manis' }, { name: 'Jus jeruk' }, { name: 'Es teh' }, { name: 'Coklat panas' }, { name: 'Jus mangga' }, { name: 'Es krim' }, { name: 'Jus alpukat' }, { name: 'Sirup' }, { name: 'Minuman soda' }],
   },
   rating: 3.9,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Saya sangat suka menu malamnya!',
     date: '13 November 2019',
@@ -165,7 +165,7 @@ const restaurants = [{
     drinks: [{ name: 'Jus alpukat' }, { name: 'Jus jeruk' }, { name: 'Coklat panas' }, { name: 'Es teh' }, { name: 'Teh manis' }, { name: 'Es krim' }, { name: 'Jus mangga' }],
   },
   rating: 4.1,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Tempatnya bagus namun menurut saya masih sedikit mahal.',
     date: '13 Juli 2019',
@@ -187,7 +187,7 @@ const restaurants = [{
     drinks: [{ name: 'Jus apel' }, { name: 'Air' }, { name: 'Teh manis' }, { name: 'Jus mangga' }, { name: 'Es teh' }, { name: 'Jus alpukat' }, { name: 'Jus tomat' }],
   },
   rating: 4,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Arif',
     review: 'Saya sangat suka menu malamnya!',
     date: '13 November 2019',
@@ -209,7 +209,7 @@ const restaurants = [{
     drinks: [{ name: 'Coklat panas' }, { name: 'Jus apel' }, { name: 'Sirup' }, { name: 'Kopi espresso' }, { name: 'Teh manis' }, { name: 'Es teh' }, { name: 'Es kopi' }, { name: 'Jus jeruk' }, { name: 'Air' }, { name: 'Jus mangga' }, { name: 'Jus tomat' }, { name: 'Minuman soda' }, { name: 'Es krim' }],
   },
   rating: 4.4,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Harganya murah sekali!',
     date: '14 Agustus 2018',
@@ -231,7 +231,7 @@ const restaurants = [{
     drinks: [{ name: 'Es kopi' }, { name: 'Es teh' }, { name: 'Jus apel' }, { name: 'Sirup' }, { name: 'Jus tomat' }, { name: 'Teh manis' }, { name: 'Air' }, { name: 'Coklat panas' }, { name: 'Kopi espresso' }, { name: 'Jus alpukat' }],
   },
   rating: 5,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Buchori',
     review: 'Saya sangat suka menu malamnya!',
     date: '14 Agustus 2018',
@@ -257,7 +257,7 @@ const restaurants = [{
     drinks: [{ name: 'Es krim' }, { name: 'Jus jeruk' }, { name: 'Jus alpukat' }, { name: 'Coklat panas' }, { name: 'Jus mangga' }, { name: 'Es teh' }, { name: 'Jus apel' }, { name: 'Jus tomat' }],
   },
   rating: 3.9,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Widdy',
     review: 'Tidak rekomendasi untuk pelajar!',
     date: '13 November 2019',
@@ -275,7 +275,7 @@ const restaurants = [{
     drinks: [{ name: 'Es teh' }, { name: 'Es krim' }, { name: 'Es kopi' }, { name: 'Coklat panas' }, { name: 'Jus alpukat' }, { name: 'Air' }, { name: 'Kopi espresso' }],
   },
   rating: 4.3,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Saya sangat suka menu malamnya!',
     date: '14 Agustus 2018',
@@ -301,7 +301,7 @@ const restaurants = [{
     drinks: [{ name: 'Es teh' }, { name: 'Sirup' }, { name: 'Jus jeruk' }, { name: 'Jus alpukat' }, { name: 'Jus tomat' }, { name: 'Jus apel' }, { name: 'Teh manis' }, { name: 'Es kopi' }, { name: 'Es krim' }],
   },
   rating: 3.8,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Buchori',
     review: 'Tidak ada duanya!',
     date: '13 November 2019',
@@ -327,7 +327,7 @@ const restaurants = [{
     drinks: [{ name: 'Sirup' }, { name: 'Kopi espresso' }, { name: 'Jus apel' }, { name: 'Coklat panas' }, { name: 'Jus alpukat' }, { name: 'Jus mangga' }, { name: 'Es krim' }, { name: 'Air' }, { name: 'Es kopi' }, { name: 'Minuman soda' }],
   },
   rating: 3.6,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Tidak rekomendasi untuk pelajar!',
     date: '13 November 2019',
@@ -345,7 +345,7 @@ const restaurants = [{
     drinks: [{ name: 'Jus alpukat' }, { name: 'Sirup' }, { name: 'Es krim' }, { name: 'Jus tomat' }, { name: 'Kopi espresso' }],
   },
   rating: 4.6,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Arif',
     review: 'Tidak ada duanya!',
     date: '13 November 2019',
@@ -371,7 +371,7 @@ const restaurants = [{
     drinks: [{ name: 'Es kopi' }, { name: 'Jus mangga' }, { name: 'Es teh' }, { name: 'Jus tomat' }, { name: 'Jus jeruk' }, { name: 'Kopi espresso' }, { name: 'Jus alpukat' }, { name: 'Minuman soda' }, { name: 'Coklat panas' }, { name: 'Jus apel' }],
   },
   rating: 3.7,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Gilang',
     review: 'Tidak ada duanya!',
     date: '13 November 2019',
@@ -393,7 +393,7 @@ const restaurants = [{
     drinks: [{ name: 'Es teh' }, { name: 'Coklat panas' }, { name: 'Es kopi' }, { name: 'Jus tomat' }, { name: 'Jus mangga' }, { name: 'Sirup' }, { name: 'Minuman soda' }, { name: 'Teh manis' }, { name: 'Jus jeruk' }, { name: 'Jus apel' }, { name: 'Air' }, { name: 'Jus alpukat' }, { name: 'Es krim' }],
   },
   rating: 4.7,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Buchori',
     review: 'Saya sangat suka menu malamnya!',
     date: '13 Juli 2019',
@@ -419,7 +419,7 @@ const restaurants = [{
     drinks: [{ name: 'Air' }, { name: 'Coklat panas' }, { name: 'Kopi espresso' }, { name: 'Jus tomat' }, { name: 'Es kopi' }, { name: 'Minuman soda' }, { name: 'Es teh' }, { name: 'Jus alpukat' }, { name: 'Teh manis' }, { name: 'Es krim' }, { name: 'Jus jeruk' }, { name: 'Jus apel' }],
   },
   rating: 4.8,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Ahmad',
     review: 'Tempatnya bagus namun menurut saya masih sedikit mahal.',
     date: '13 Juli 2019',
@@ -437,7 +437,7 @@ const restaurants = [{
     drinks: [{ name: 'Jus alpukat' }, { name: 'Air' }, { name: 'Es krim' }, { name: 'Jus mangga' }, { name: 'Jus tomat' }, { name: 'Kopi espresso' }, { name: 'Jus jeruk' }, { name: 'Es kopi' }],
   },
   rating: 4.9,
-  consumerReviews: [{
+  customerReviews: [{
     name: 'Buchori',
     review: 'Saya sangat suka menu malamnya!',
     date: '13 Juli 2019',
