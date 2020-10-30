@@ -1,5 +1,5 @@
 import BaseFactory from '../../../utils/BaseFactory';
-import ConsumerReviewFactory from './ConsumerReviewFactory';
+import CustomerReviewFactory from './CustomerReviewFactory';
 import CategoriesFactory from './CategoriesFactory';
 import randomize from '../../../utils/randomize';
 import { arrayMaker, arrayReducer } from '../../../utils/array-generator';
@@ -22,7 +22,7 @@ export default class RestaurantFactory extends BaseFactory {
 
     // i wanna keep functional style so i avoid to use traditional for loop.
     this._categories = this._names.map(() => new CategoriesFactory(randomize(2)).build());
-    this._consumerReviews = this._names.map(() => new ConsumerReviewFactory(randomize(3)).build());
+    this._customerReviews = this._names.map(() => new CustomerReviewFactory(randomize(3)).build());
     this._foods = this._names.map(() => new FoodsFactory(randomize(10, 4)).build());
     this._drinks = this._names.map(() => new DrinksFactory(randomize(10, 4)).build());
   }
@@ -41,7 +41,7 @@ export default class RestaurantFactory extends BaseFactory {
         drinks: this._drinks[index],
       },
       rating: this._rating[index],
-      consumerReviews: this._consumerReviews[index],
+      customerReviews: this._customerReviews[index],
     }));
   }
 }

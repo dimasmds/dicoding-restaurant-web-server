@@ -37,7 +37,7 @@ class RestaurantRepository {
     this._store.dispatch(addReviewAction(review));
     this._restaurants = this._store.getState();
     const restaurant = this._restaurants.filter((res) => res.id === review.id);
-    return restaurant.length ? restaurant[0].consumerReviews : null;
+    return restaurant.length ? restaurant[0].customerReviews : null;
   }
 
   searchRestaurants(query) {

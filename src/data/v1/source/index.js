@@ -121,9 +121,9 @@ const drinks = [
 
 ];
 
-const consumerNames = ['Dimas', 'Ahmad', 'Widdy', 'Gilang', 'Arif', 'Buchori'];
+const customerNames = ['Dimas', 'Ahmad', 'Widdy', 'Gilang', 'Arif', 'Buchori'];
 
-const consumerReview = [
+const customerReview = [
   'Makanan di sini sangat enak!',
   'Harganya murah sekali!',
   'Tidak ada duanya!',
@@ -151,7 +151,7 @@ const ratings = [
   5.0,
 ];
 
-const consumerDate = ['12 Januari 2020', '13 November 2019', '14 Agustus 2018', '13 Juli 2019'];
+const customerDate = ['12 Januari 2020', '13 November 2019', '14 Agustus 2018', '13 Juli 2019'];
 
 export {
   names,
@@ -160,9 +160,9 @@ export {
   address,
   descriptions,
   pictures,
-  consumerNames,
-  consumerReview,
-  consumerDate,
+  customerNames,
+  customerReview,
+  customerDate,
   drinks,
   foods,
   ratings,

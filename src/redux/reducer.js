@@ -7,7 +7,7 @@ const restaurantReducer = (state = [], action) => {
     case ActionType.ADD_REVIEW:
       return state.map((s) => (s.id === action.review.id ? {
         ...s,
-        consumerReviews: [...s.consumerReviews, {
+        customerReviews: [...s.customerReviews, {
           name: action.review.name,
           review: action.review.review,
           date: action.review.date,
