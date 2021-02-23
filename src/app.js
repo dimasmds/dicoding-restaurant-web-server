@@ -22,19 +22,22 @@ app.get('/', (request, response) => {
 
 app.get('/images/small/:imageId', (request, response) => {
   response.status(200);
-  response.set({ 'Content-Type': 'image/png' });
+  response.set('Cache-Control', 'public, max-age=31557600');
+  response.set({ 'Content-Type': 'image/jpeg' });
   response.sendFile(path.resolve(__dirname, `images/small/${request.params.imageId}.jpg`));
 });
 
 app.get('/images/medium/:imageId', (request, response) => {
   response.status(200);
-  response.set({ 'Content-Type': 'image/png' });
+  response.set('Cache-Control', 'public, max-age=31557600');
+  response.set({ 'Content-Type': 'image/jpeg' });
   response.sendFile(path.resolve(__dirname, `images/medium/${request.params.imageId}.jpg`));
 });
 
 app.get('/images/large/:imageId', (request, response) => {
   response.status(200);
-  response.set({ 'Content-Type': 'image/png' });
+  response.set('Cache-Control', 'public, max-age=31557600');
+  response.set({ 'Content-Type': 'image/jpeg' });
   response.sendFile(path.resolve(__dirname, `images/large/${request.params.imageId}.jpg`));
 });
 
