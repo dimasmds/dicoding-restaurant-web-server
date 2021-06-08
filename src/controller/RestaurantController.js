@@ -73,7 +73,7 @@ export default class RestaurantController {
         message: 'failed to add review because you use blank or empty string for property \'name\'',
         customerReviews: [],
       };
-    } else if(this._containScripts(dataReview)){
+    } else if(this._containScripts(reviewerName)){
       return {
         error: true,
         message: 'matches any scripts or tags included in property \'name\', please use a valid name!',
